@@ -1,6 +1,6 @@
 ---
 name: prd
-description: PRD writing skill for product builders. Use when ready to define product requirements. Transforms ideas or research into structured PRD with phased feature rollout (validation → refinement → expansion).
+description: Use when user explicitly wants to write or create a PRD/product requirements document. Triggers: "write PRD", "create PRD", "document requirements", "define the product". Requires user to have a product direction—if unclear, suggest market-research first.
 ---
 
 # PRD Writing
@@ -15,15 +15,16 @@ Transform product ideas into structured PRD documents with phased implementation
 
 ## Process
 
-### Phase 1: Determine Input
+### Step 1: Assess Readiness
 
-Check for existing research:
+Ask user to describe their product idea. Based on clarity:
 
-1. Look for `docs/prd/research-*.md` files
-2. If found, ask: "Found research document for [topic]. Base PRD on this research?"
-3. If none, ask user to describe their product idea
+- **Clear direction** → Proceed to Step 2
+- **Vague/uncertain** → Suggest using `/sparkai:market-research` for market research first
 
-### Phase 2: Product Definition
+Also check for `docs/prd/research-*.md` files. If found, ask if they want to base the PRD on that research.
+
+### Step 2: Product Definition
 
 Guide through core product decisions (one question at a time):
 
@@ -48,7 +49,7 @@ When user is uncertain, provide recommendations based on:
 - Market best practices
 - Indie developer constraints (lean, fast validation)
 
-### Phase 3: Refine Requirements
+### Step 3: Refine Requirements
 
 Structure features into phases:
 
@@ -69,7 +70,7 @@ Also capture:
 - Non-functional requirements (performance, security basics)
 - Constraints (technical limitations, resource limits)
 
-### Phase 4: Output Document
+### Step 4: Output Document
 
 Generate `docs/prd/<product-name>.md`:
 
@@ -126,3 +127,4 @@ As a [user], I want to [action] so that [outcome].
 - **Proactive recommendations**: When user is uncertain, suggest based on research/best practices
 - **Product focus**: Keep technical details minimal, only essential constraints
 - **One question at a time**: Don't overwhelm with multiple questions
+- **Match user's language**: Output in the same language the user uses in conversation
