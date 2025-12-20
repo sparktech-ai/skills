@@ -17,9 +17,14 @@ Transform product ideas into structured PRD documents with phased implementation
 
 ### Step 1: Assess Readiness
 
-Check for `docs/prd/research-*.md` files first:
+**Same-session handoff**: If user just completed `/sparkai:market-research` in this conversation, skip the file check—use the research insights directly and proceed to pre-fill confirmation.
 
-- **Research exists** → Ask: "Found research for [topic]. Use this as the basis?" If yes, extract key insights (target users, pain points, recommended direction) to pre-fill Step 2 answers—only confirm or refine with user instead of asking from scratch.
+**New session**: Check for `docs/prd/research-*.md` files first:
+
+- **Research exists** → Ask: "Found research for [topic]. Use this as the basis?" If yes, pre-fill Step 2 using research insights:
+  - Research "Target Users & Pain Points" → pre-fills questions 1 (problem) and 2 (users)
+  - Research "Recommended Direction" → pre-fills questions 3 (use case) and 4 (MVP scope)
+  - Present pre-filled answers for confirmation: "Based on the research, here's what I have: [summary]. Does this look right, or would you like to adjust?"
 - **No research** → Ask user to describe their product idea
 
 Based on clarity of user's input:
@@ -119,3 +124,9 @@ As a [user], I want to [action] so that [outcome].
 - **Product focus**: Keep technical details minimal, only essential constraints
 - **One question at a time**: Don't overwhelm with multiple questions
 - **Match user's language**: Output in the same language the user uses in conversation
+
+## Handling Edge Cases
+
+- **User abandons mid-process**: Save progress to a draft file (`docs/prd/<product-name>-draft.md`) so user can resume later.
+- **Insufficient information**: If user can't answer a core question after clarification, note it as "TBD" in the PRD and suggest validating with user research.
+- **Conflicting requirements**: Surface the conflict explicitly, present trade-offs, and let user decide.

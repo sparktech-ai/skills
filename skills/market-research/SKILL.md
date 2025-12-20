@@ -7,6 +7,14 @@ description: Use when user explicitly wants market research, competitor analysis
 
 Help product builders discover and validate product opportunities through market research.
 
+## CRITICAL: Do Not Skip
+
+**Before ANY research, you MUST know:**
+1. **Goal** - monetization, learning, or solving a personal pain point?
+2. **Market** - local (e.g., China) or global?
+
+If the user's initial message doesn't provide both, **STOP and ask** before doing any WebSearch or WebFetch. These determine which competitors to analyze, what pricing to reference, and which distribution channels matter.
+
 ## Research Methods
 
 Use WebSearch and WebFetch based on what you need:
@@ -46,41 +54,48 @@ Use WebSearch and WebFetch based on what you need:
 
 ## Process
 
-### Step 1: Understand Goals
+### Step 1: Understand Starting Point
 
-Ask two questions (one at a time):
+First, ask one open question:
 
-1. **"What type of product do you want to build? Any initial ideas?"**
-2. **"What's your main goal—monetization, learning, or solving a personal pain point?"**
+**"Do you have a product direction in mind, or are you looking for ideas?"**
 
-Let constraints emerge naturally through conversation. Don't interrogate.
+Based on response:
 
-### Step 2: Market Exploration
+- **Clear direction** → **MUST confirm both context items before any research**:
+  1. **Goal**: monetization, learning, or solving a personal pain point?
+  2. **Market**: local (e.g., China) or global?
 
-When the user's idea is vague or blank, actively research opportunities:
+  Only ask what's missing. Example: user says "subscription manager to monetize" → goal is clear, ask about market. **DO NOT proceed to Step 3 until both are explicitly confirmed.** These shape competitor selection, pricing strategy, and distribution recommendations.
 
-1. Use WebSearch to find:
-   - **Specific user pain points** - Look for "I wish there was..." "frustrated with..." discussions
+- **Vague/uncertain** → Proceed to Step 2 (Trend Exploration) first. Context questions will be asked after user picks a direction.
+
+### Step 2: Trend Exploration (when direction unclear)
+
+**Purpose**: Discover potential directions (breadth). This step identifies options—detailed validation happens in Step 3.
+
+Help user find direction through trend research:
+
+1. Use WebSearch to discover:
+   - Trending products on Product Hunt, GitHub trending
    - Emerging pain points in developer/productivity tools
-   - Underserved niches with clear, focused needs
-   - Trending markets and opportunities
+   - Hot topics and underserved niches
 
-2. Filter opportunities by:
-   - **Pain point specificity** - Is it a clear, focused problem?
-   - **Niche definition** - Can you serve 100 users exceptionally well?
-   - User's stated purpose (monetization vs learning)
-   - Feasibility for the team/individual
-   - Competition level (large competitors often ignore niches)
-
-3. Present 2-3 directions with:
-   - **Recommended option first** with reasoning (prioritize small-beautiful over large-comprehensive)
+2. Present 2-3 potential directions with:
+   - **Recommended option first** with reasoning
    - Specific pain point being solved
-   - Target niche and size
-   - Minimum viable scope
+   - Target niche and why it fits their goals
    - Pros/cons for each
-   - Why it fits their goals
 
-### Step 3: Deep Dive (after user selects direction)
+3. **Wait for user to confirm direction**, then ask the context questions:
+   - **"What's your main goal—monetization, learning, or solving a personal pain point?"**
+   - **"Who's your target market—local (e.g., China) or global?"**
+
+4. Proceed to Step 3 (Deep Dive) after context is confirmed.
+
+### Step 3: Deep Dive (after direction confirmed)
+
+**Purpose**: Validate the chosen direction (depth). This step provides thorough analysis to inform the PRD.
 
 Research the selected direction thoroughly:
 
@@ -142,3 +157,9 @@ After generating the document, suggest: "When ready to define requirements, use 
 - **One question at a time**: Keep dialogue focused, don't overwhelm
 - **User decides**: Present options, let user choose direction
 - **Match user's language**: Output in the same language the user uses in conversation
+
+## Handling Edge Cases
+
+- **User abandons mid-process**: Save any partial insights gathered so far. Offer to resume later.
+- **Insufficient information**: If user's responses are too vague to proceed, ask one clarifying question. If still unclear after 2 attempts, suggest starting with a more concrete pain point or use case.
+- **WebSearch/WebFetch fails**: Note the gap in research, proceed with available data, and flag limitations in the output document.
