@@ -1,12 +1,17 @@
 {
-  "name": "sparkai-dev",
+  "name": "sparkai-skills",
   "owner": {
     "name": "Brooks"
   },
   "plugins": [
     {
-      "name": "sparkai",
-      "source": "./"
+      "name": "pm",
+      "description": "Product management workflows: market research and PRD creation",
+      "version": "0.1.0",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/market-research", "./skills/writing-prd"],
+      "commands": ["./commands/"]
     }
   ]
 }

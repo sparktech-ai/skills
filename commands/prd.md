@@ -1,5 +1,5 @@
 ---
-description: Write a PRD document with phased feature rollout (validation → refinement → expansion)
+description: Create focused PRDs for small, beautiful products
 ---
 
-Use and follow the prd skill exactly as written
+Use and follow the writing-prd skill exactly as written
