@@ -7,14 +7,6 @@ description: Use when user explicitly wants market research, competitor analysis
 
 Help product builders discover and validate product opportunities through market research.
 
-## CRITICAL: Do Not Skip
-
-**Before ANY research, you MUST know:**
-1. **Goal** - monetization, learning, or solving a personal pain point?
-2. **Market** - local (e.g., China) or global?
-
-If the user's initial message doesn't provide both, **STOP and ask** before doing any WebSearch or WebFetch. These determine which competitors to analyze, what pricing to reference, and which distribution channels matter.
-
 ## Research Methods
 
 Use WebSearch and WebFetch based on what you need:
@@ -56,19 +48,19 @@ Use WebSearch and WebFetch based on what you need:
 
 ### Step 1: Understand Starting Point
 
-First, ask one open question:
+**Always ask these three questions first, regardless of how clear the user's direction is:**
 
-**"Do you have a product direction in mind, or are you looking for ideas?"**
+1. **"Do you have a product direction in mind, or are you looking for ideas?"**
+2. **"What's your main goal—monetization, learning, or solving a personal pain point?"**
+3. **"Who's your target market—local (e.g., China) or global?"**
 
-Based on response:
+Only ask what's missing from the user's initial message. Example: user says "I want to build a subscription manager for the China market to make money" → all three are clear, proceed directly.
 
-- **Clear direction** → **MUST confirm both context items before any research**:
-  1. **Goal**: monetization, learning, or solving a personal pain point?
-  2. **Market**: local (e.g., China) or global?
+**DO NOT proceed to any research until all three are confirmed.** Goal and Market determine which competitors to analyze, what pricing to reference, and which trends are relevant—even during trend exploration.
 
-  Only ask what's missing. Example: user says "subscription manager to monetize" → goal is clear, ask about market. **DO NOT proceed to Step 3 until both are explicitly confirmed.** These shape competitor selection, pricing strategy, and distribution recommendations.
-
-- **Vague/uncertain** → Proceed to Step 2 (Trend Exploration) first. Context questions will be asked after user picks a direction.
+Based on whether user has a direction:
+- **Clear direction** → Proceed to Step 3 (Deep Dive)
+- **Vague/uncertain** → Proceed to Step 2 (Trend Exploration)
 
 ### Step 2: Trend Exploration (when direction unclear)
 
@@ -87,11 +79,7 @@ Help user find direction through trend research:
    - Target niche and why it fits their goals
    - Pros/cons for each
 
-3. **Wait for user to confirm direction**, then ask the context questions:
-   - **"What's your main goal—monetization, learning, or solving a personal pain point?"**
-   - **"Who's your target market—local (e.g., China) or global?"**
-
-4. Proceed to Step 3 (Deep Dive) after context is confirmed.
+3. **Wait for user to confirm direction**, then proceed to Step 3 (Deep Dive).
 
 ### Step 3: Deep Dive (after direction confirmed)
 
