@@ -1,0 +1,12 @@
+{
+  "name": "sparkai-dev",
+  "owner": {
+    "name": "Brooks"
+  },
+  "plugins": [
+    {
+      "name": "sparkai",
+      "source": "./"
+    }
+  ]
+}

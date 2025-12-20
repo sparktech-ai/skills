@@ -1,6 +1,6 @@
 ---
 name: prd
-description: PRD writing skill for indie developers. Use when ready to define product requirements. Transforms ideas or research into structured PRD with phased feature rollout (validation → refinement → expansion).
+description: PRD writing skill for product builders. Use when ready to define product requirements. Transforms ideas or research into structured PRD with phased feature rollout (validation → refinement → expansion).
 ---
 
 # PRD Writing

@@ -1,11 +1,11 @@
 ---
-name: research
-description: Market research skill for indie developers. Use when exploring product ideas, analyzing markets, or finding opportunities. Helps go from vague ideas (or none) to clear product direction through research and analysis.
+name: market-research
+description: Market research skill for product builders. Use when exploring product ideas, analyzing markets, or finding opportunities. Helps go from vague ideas (or none) to clear product direction through research and analysis.
 ---
 
 # Market Research
 
-Help indie developers discover and validate product opportunities through market research.
+Help product builders discover and validate product opportunities through market research.
 
 ## When to Use
 
@@ -38,13 +38,13 @@ Start by understanding what the user wants to achieve:
 When the user's idea is vague or blank, actively research opportunities:
 
 1. Use WebSearch to find:
-   - Trending markets suitable for indie developers
+   - Trending markets and opportunities
    - Emerging pain points in developer/productivity tools
    - Underserved niches with monetization potential
 
 2. Filter opportunities by:
    - User's stated purpose (monetization vs learning)
-   - Feasibility for solo developer
+   - Feasibility for the team/individual
    - Competition level
 
 3. Present 2-3 directions with:
