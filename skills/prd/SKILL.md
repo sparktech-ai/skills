@@ -17,32 +17,23 @@ Transform product ideas into structured PRD documents with phased implementation
 
 ### Step 1: Assess Readiness
 
-Ask user to describe their product idea. Based on clarity:
+Check for `docs/prd/research-*.md` files first:
 
+- **Research exists** → Ask: "Found research for [topic]. Use this as the basis?" If yes, extract key insights (target users, pain points, recommended direction) to pre-fill Step 2 answers—only confirm or refine with user instead of asking from scratch.
+- **No research** → Ask user to describe their product idea
+
+Based on clarity of user's input:
 - **Clear direction** → Proceed to Step 2
 - **Vague/uncertain** → Suggest using `/sparkai:market-research` for market research first
 
-Also check for `docs/prd/research-*.md` files. If found, ask if they want to base the PRD on that research.
-
 ### Step 2: Product Definition
 
-Guide through core product decisions (one question at a time):
+Guide through 4 core questions (one at a time):
 
-**Core Value:**
-- What problem does this solve?
-- What's the one-sentence pitch?
-
-**Target Users:**
-- Who specifically will use this?
-- What's their current situation?
-
-**Core Scenarios:**
-- Walk through primary use case
-- What does success look like for the user?
-
-**MVP Scope:**
-- What's absolutely essential for first version?
-- What can wait?
+1. **"What problem does this solve?"** - Core value proposition
+2. **"Who specifically will use this?"** - Target user persona
+3. **"Walk me through how a user would use this"** - Primary use case
+4. **"What's essential for the first version?"** - MVP scope
 
 When user is uncertain, provide recommendations based on:
 - Research document insights (if available)

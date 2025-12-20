@@ -133,6 +133,8 @@ Generate `docs/prd/research-<topic>.md`:
 - Rationale
 ```
 
+After generating the document, suggest: "When ready to define requirements, use `/sparkai:prd` to create a PRD based on this research."
+
 ## Key Principles
 
 - **Proactive research**: Don't just ask questions—actively search and analyze
