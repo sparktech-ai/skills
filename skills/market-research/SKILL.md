@@ -91,6 +91,7 @@ Research the selected direction thoroughly:
 - Identify 3-5 main players
 - Analyze pricing, features, positioning
 - Find gaps and weaknesses
+- **Research competitor pain points**: Search for user complaints, negative reviews, feature requests (e.g., "[competitor] frustrating", "[competitor] missing feature", "[competitor] alternative" on Reddit, HackerNews, Twitter)
 - Use WebSearch and WebFetch for data
 
 **User Research:**
@@ -124,6 +125,10 @@ Generate `docs/prd/research-<topic>.md`:
 | Competitor | Strengths | Weaknesses | Pricing |
 |------------|-----------|------------|---------|
 | ...        | ...       | ...        | ...     |
+
+### User Pain Points with Competitors
+- [Competitor A]: [common complaints, missing features]
+- [Competitor B]: [common complaints, missing features]
 
 ## Target Users & Pain Points
 - Primary persona
