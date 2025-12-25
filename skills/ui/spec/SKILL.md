@@ -38,7 +38,36 @@ docs/ui/
 
 Missing prerequisites → Suggest completing them first
 
-### Step 2: Identify Pages
+### Step 2: Confirm Design Preferences
+
+Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if they exist. Present the following to user for confirmation:
+
+| Preference | Description | Example Values |
+|------------|-------------|----------------|
+| **UI Component Library** | Framework components to use | HeroUI, shadcn/ui, Ant Design |
+| **Primary Color** | Brand primary color | #3B82F6, blue-500 |
+| **Theme Support** | Light/dark mode support | light-only, dark-only, both (default: light), both (default: dark) |
+| **Border Radius** | Corner roundness style | none, sm, md, lg, full |
+| **Visual Style** | Overall aesthetic direction | minimal, modern, playful, corporate |
+
+**Flow:**
+1. Extract existing preferences from stack.md or style.md
+2. Present summary: "Design preferences: [list]. Confirm or adjust?"
+3. If no existing preferences, ask user to provide them
+4. Save confirmed preferences to `docs/ui/style.md`
+
+**style.md format:**
+```markdown
+# UI Style Guide
+
+- **UI Library:** [library]
+- **Primary Color:** [color]
+- **Theme:** [theme support and default]
+- **Border Radius:** [radius]
+- **Visual Style:** [style]
+```
+
+### Step 3: Identify Pages
 
 From user-flow.md, extract all unique screens:
 
@@ -48,7 +77,7 @@ From user-flow.md, extract all unique screens:
 
 Ask: "I identified these pages from the user flow: [list]. Any to add or remove?"
 
-### Step 3: Generate Page Specs
+### Step 4: Generate Page Specs
 
 For each page, create `docs/ui/pages/{page-name}.md`:
 
@@ -78,42 +107,48 @@ For each page, create `docs/ui/pages/{page-name}.md`:
 
 Use the user's conversation language for page specs.
 
-### Step 4: Generate Stitch AI Prompts
+### Step 5: Generate Stitch AI Prompts
 
 For each page, create `docs/ui/prompts/{page-name}.md`:
 
 ```markdown
-Design a [page type] for a [platform] app.
+Design a [page type] for a [platform] application.
 
 **Context:**
-[Brief description of the app and this page's purpose]
+[Product name] - [One-liner from PRD]
+Target users: [Target users from PRD]
+This page: [Brief description of this page's purpose and position in user flow]
 
 **Elements:**
 - [Element with behavior]
 - [Element with behavior]
 
 **States:**
-- Default: [description]
 - Loading: [description]
 - Empty: [description]
 - Error: [description]
 
 **Style:**
-[Design direction - colors, theme, style]
+- Visual style: [from style.md]
+- Primary color: [from style.md]
+- Border radius: [from style.md]
+- Theme: Support light/dark theme following the established pattern from landing page
 
 **Constraints:**
-- Use [UI component library from stack.md] components
+- Use [UI component library from style.md] components
 - [Other technical constraints from stack.md]
 ```
 
-### Step 5: Batch Review
+**Important:** Always extract product name, one-liner, and target users from `docs/prd/prd.md` and include them in the Context section. This ensures Stitch AI generates contextually appropriate content instead of placeholder text.
+
+### Step 6: Batch Review
 
 After generating all pages:
 - Present a summary of all specs and prompts
 - Ask if any need adjustments
 - Iterate on specific pages as needed
 
-### Step 6: Summary
+### Step 7: Summary
 
 After all pages complete:
 - List all generated files
@@ -123,10 +158,39 @@ After all pages complete:
 
 - **Match user's language**: Specs follow conversation language, prompts always in English
 - **Derive from user flow**: Every page should map to a flow step
-- **Include all states**: Default, loading, empty, error for each page
+- **Confirm before generating**: Always confirm design preferences with user before generating prompts
+- **Inject product context**: Include product name, one-liner, and target users from PRD in prompts
+- **Apply design preferences**: Include all style preferences (color, radius, theme, visual style) in every prompt
 
 ## Handling Edge Cases
 
 - **Missing tech stack**: Proceed without component library constraints, note that prompts may need updating after `/tech:stack`.
 - **Complex page with many states**: Break into sub-pages or components if a single prompt would be too long for Stitch AI.
 - **User wants different design direction**: Update Style section in both spec and prompt; maintain consistency across all pages.
+
+## Landing Page Special Handling
+
+When generating a landing page prompt, ask user to confirm Hero section details before generating:
+
+| Element | Options |
+|---------|---------|
+| **Background** | solid / gradient / pattern (grid, dots) / animated (particles, waves) |
+| **CTA Buttons** | single (Get Started) / dual (Get Started + Learn More) / with demo (Get Started + Watch Demo) |
+| **Hero Visual** | none / product screenshot / mockup / 3D illustration / floating shapes |
+| **Social Proof** | none / metrics below hero / trust badges / client logos |
+
+Present defaults based on Visual Style from style.md:
+- `minimal`: solid background, single CTA, none visual, none social proof
+- `modern`: gradient background, dual CTA, product screenshot, metrics below hero
+- `playful`: animated background, dual CTA, 3D illustration, trust badges
+- `corporate`: pattern background, with demo CTA, mockup, client logos
+
+Ask: "Hero section for landing page - [defaults based on style]. Adjust?"
+
+Include confirmed choices in the landing page prompt's Elements section.
+
+**Theme generation strategy:**
+- Landing page: MUST generate both light and dark theme versions explicitly (two separate designs establishing the pattern)
+- Other pages: Reference landing page pattern with "Support light/dark theme following the established pattern from landing page"
+
+This reduces generation overhead while ensuring theme consistency across all pages.
