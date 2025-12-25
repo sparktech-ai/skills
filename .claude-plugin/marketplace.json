@@ -5,12 +5,19 @@
   },
   "plugins": [
     {
-      "name": "pm",
-      "description": "Product management workflows: market research and PRD creation",
+      "name": "spark",
+      "description": "Product builder workflow: research, PRD, tech stack, architecture, UI specs",
       "version": "0.1.0",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/market-research", "./skills/writing-prd"],
+      "skills": [
+        "./skills/pm/market-research",
+        "./skills/pm/teardown",
+        "./skills/pm/writing-prd",
+        "./skills/tech/stack",
+        "./skills/tech/arch",
+        "./skills/ui/spec"
+      ],
       "commands": ["./commands/"]
     }
   ]

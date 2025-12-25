@@ -2,33 +2,30 @@
 
 Claude Code skills for product builders.
 
-## Product Management Skills
+## Commands
 
-### `/pm:research` - Market Research
-Explore product opportunities through market research and competitor analysis.
+| Command | Description | Output |
+|---------|-------------|--------|
+| `/spark:pm-research` | Market research and opportunity discovery | `docs/prd/research-*.md` |
+| `/spark:pm-teardown` | Competitor feature analysis (optional) | `docs/prd/teardown-*.md` |
+| `/spark:pm-prd` | PRD with user flow | `docs/prd/prd.md`, `docs/prd/user-flow.md` |
+| `/spark:tech-stack` | Technology stack decisions | `docs/tech/stack.md` |
+| `/spark:tech-arch` | Top-level system architecture | `docs/tech/architecture.md` |
+| `/spark:ui-spec` | Page specs and Stitch AI prompts | `docs/ui/pages/*.md`, `docs/ui/prompts/*.md` |
 
-**Use when:**
-- Starting a new project but unsure what to build
-- Have a vague idea and want to validate it
-- Need to understand market landscape
+## Workflow
 
-**Output:** `docs/prd/research-<topic>.md`
-
-### `/pm:prd` - PRD Writing
-Transform ideas into structured PRD documents with phased implementation.
-
-**Use when:**
-- Have a clear product idea ready to document
-- Completed market research
-- Need to structure thoughts into actionable requirements
-
-**Output:** `docs/prd/<product-name>.md`
+```
+/spark:pm-research → /spark:pm-prd → /spark:tech-stack → /spark:ui-spec
+         ↓                                  ↘ /spark:tech-arch
+/spark:pm-teardown (optional)
+```
 
 ## Installation
 
 ```bash
-/plugin marketplace add sparktech-ai/skills
-/plugin install pm@sparktech-ai-skills
+/plugin marketplace add sparking-ai/skills
+/plugin install spark@sparkai-skills
 ```
 
 Then restart Claude Code to activate the skills.

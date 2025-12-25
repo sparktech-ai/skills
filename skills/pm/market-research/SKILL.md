@@ -48,15 +48,15 @@ Use WebSearch and WebFetch based on what you need:
 
 ### Step 1: Understand Starting Point
 
-**Always ask these three questions first, regardless of how clear the user's direction is:**
+**Gather three pieces of context before researching:**
 
-1. **"Do you have a product direction in mind, or are you looking for ideas?"**
-2. **"What's your main goal—monetization, learning, or solving a personal pain point?"**
-3. **"Who's your target market—local (e.g., China) or global?"**
+1. **Direction**: Does user have a product idea, or exploring options?
+2. **Goal**: Monetization, learning, or solving personal pain point?
+3. **Market**: Target region/audience?
 
-Only ask what's missing from the user's initial message. Example: user says "I want to build a subscription manager for the China market to make money" → all three are clear, proceed directly.
+**How to gather**: Check what's already clear from user's message, then ask about missing pieces in a single question. Example: user says "I want to build a subscription manager to make money" → direction and goal are clear, only ask about target market.
 
-**DO NOT proceed to any research until all three are confirmed.** Goal and Market determine which competitors to analyze, what pricing to reference, and which trends are relevant—even during trend exploration.
+**DO NOT proceed to research until all three are confirmed.** Goal and Market determine which competitors to analyze, what pricing to reference, and which trends are relevant.
 
 Based on whether user has a direction:
 - **Clear direction** → Proceed to Step 3 (Deep Dive)
@@ -141,7 +141,7 @@ Generate `docs/prd/research-<topic>.md`:
 - Rationale
 ```
 
-After generating the document, suggest: "When ready to define requirements, use `/pm:prd` to create a PRD based on this research."
+After generating the document, suggest: "Want to dive deeper into competitor features? Use `/pm:teardown` for detailed analysis. Or skip to `/pm:prd` if ready to define requirements."
 
 ## Key Principles
 
