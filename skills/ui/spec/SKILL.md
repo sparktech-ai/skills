@@ -45,6 +45,7 @@ Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if th
 | Preference | Description | Example Values |
 |------------|-------------|----------------|
 | **UI Component Library** | Framework components to use | HeroUI, shadcn/ui, Ant Design |
+| **Icon Library** | Icon package to use (SVG format) | Lucide, Heroicons, Phosphor, Tabler |
 | **Primary Color** | Brand primary color | #3B82F6, blue-500 |
 | **Theme Support** | Light/dark mode support | light-only, dark-only, both (default: light), both (default: dark) |
 | **Border Radius** | Corner roundness style | none, sm, md, lg, full |
@@ -61,6 +62,7 @@ Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if th
 # UI Style Guide
 
 - **UI Library:** [library]
+- **Icon Library:** [icon package, e.g., Lucide]
 - **Primary Color:** [color]
 - **Theme:** [theme support and default]
 - **Border Radius:** [radius]
@@ -136,6 +138,7 @@ This page: [Brief description of this page's purpose and position in user flow]
 
 **Constraints:**
 - Use [UI component library from style.md] components
+- Use [Icon library from style.md] icons (SVG format)
 - [Other technical constraints from stack.md]
 ```
 
