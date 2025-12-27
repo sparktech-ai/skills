@@ -17,12 +17,16 @@ Generate page specifications and Stitch AI prompts (English) for each screen.
 
 ```
 docs/ui/
-├── pages/           # Page specs (user's language)
-│   ├── login.md
-│   └── dashboard.md
-└── prompts/         # Stitch AI prompts (English, for AI)
-    ├── login.md
-    └── dashboard.md
+├── pages/           # Page specs (user's language), numbered by priority
+│   ├── 01-landing.md
+│   ├── 02-error.md
+│   ├── 03-login.md
+│   └── 04-dashboard.md
+└── prompts/         # Stitch AI prompts (English, for AI), numbered by priority
+    ├── 01-landing.md
+    ├── 02-error.md
+    ├── 03-login.md
+    └── 04-dashboard.md
 ```
 
 ## Process
@@ -69,19 +73,29 @@ Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if th
 - **Visual Style:** [style]
 ```
 
-### Step 3: Identify Pages
+### Step 3: Identify and Prioritize Pages
 
-From user-flow.md, extract all unique screens:
+From user-flow.md, extract all unique screens and sort by implementation priority:
 
+**Priority order:**
+1. Landing page - establishes visual foundation
+2. Error pages - 404, 500, generic error (simple but can be triggered anytime)
+3. Auth pages - login, register, forgot password
+4. Core feature pages - main functionality (by user-flow order)
+5. Secondary pages - settings, profile, etc.
+
+**Flow:**
 1. List all pages mentioned in flows
-2. Categorize by flow (primary, secondary, error)
-3. Present list for confirmation
+2. Auto-sort by priority order above
+3. Present numbered list for confirmation
 
-Ask: "I identified these pages from the user flow: [list]. Any to add or remove?"
+Ask: "Pages sorted by implementation priority: [numbered list]. Adjust order?"
+
+File naming: `{nn}-{page-name}.md` (e.g., `01-landing.md`, `02-404.md`)
 
 ### Step 4: Generate Page Specs
 
-For each page, create `docs/ui/pages/{page-name}.md`:
+For each page, create `docs/ui/pages/{nn}-{page-name}.md`:
 
 ```markdown
 # [Page Name]
@@ -111,7 +125,7 @@ Use the user's conversation language for page specs.
 
 ### Step 5: Generate Stitch AI Prompts
 
-For each page, create `docs/ui/prompts/{page-name}.md`:
+For each page, create `docs/ui/prompts/{nn}-{page-name}.md`:
 
 ```markdown
 Design a [page type] for a [platform] application.
