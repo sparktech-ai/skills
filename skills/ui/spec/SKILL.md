@@ -17,12 +17,14 @@ Generate page specifications and Stitch AI prompts (English) for each screen.
 
 ```
 docs/ui/
-├── pages/           # Page specs (user's language), numbered by priority
+├── design-concept.md # Design philosophy, mood, and visual strategy
+├── style.md          # Technical style guide (colors, radius, libraries)
+├── pages/            # Page specs (user's language), numbered by priority
 │   ├── 01-landing.md
 │   ├── 02-error.md
 │   ├── 03-login.md
 │   └── 04-dashboard.md
-└── prompts/         # Stitch AI prompts (English, for AI), numbered by priority
+└── prompts/          # Stitch AI prompts (English, for AI), numbered by priority
     ├── 01-landing.md
     ├── 02-error.md
     ├── 03-login.md
@@ -38,13 +40,54 @@ docs/ui/
 **New session**: Check for existing documents:
 - `docs/prd/prd.md` - **Required**
 - `docs/prd/user-flow.md` - **Required**
+- `docs/prd/research-*.md` - **Optional** (highly recommended for design inspiration)
 - `docs/tech/stack.md` - **Optional** (provides UI component library and constraints)
 
 Missing prerequisites → Suggest completing them first
 
-### Step 2: Confirm Design Preferences
+### Step 2: Define Design Concept
 
-Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if they exist. Present the following to user for confirmation:
+Before defining technical parameters, establish the "soul" of the design based on the product's goals and market positioning.
+
+**Input:**
+- Analysis of `docs/prd/prd.md` (Target audience, Core value)
+- Analysis of `docs/prd/research-*.md` (Competitor visual distinctiveness)
+
+**Action:**
+Propose a professional design concept. Don't ask the user to design it; acting as a Design Director, **present a recommended direction** that fits the product.
+
+**Output to `docs/ui/design-concept.md`:**
+```markdown
+# Design Concept
+
+## Design Philosophy
+[e.g., "Radical Simplicity," "Data-Dense Professionalism," "Playful Exploration"]
+[Brief explanation of why this philosophy fits the PRD]
+
+## Mood & Atmosphere
+[Keywords describing the feeling, e.g., Trustworthy, Energetic, Calm, Futuristic]
+[Description of emotional response intended for the user]
+
+## Visual Strategy
+- **Color Psychology:** [Strategy for color usage, e.g., "Deep blues for trust with electric neon accents for action"]
+- **Typography & Hierarchy:** [e.g., "Clean sans-serifs with high-contrast sizing for readability"]
+- **Spacing & Layout:** [e.g., "Generous white space to reduce cognitive load"]
+
+## Interaction Principles
+[e.g., "Instant feedback, minimal motion," "Fluid transitions, playful micro-interactions"]
+```
+
+**Flow:**
+1. Analyze PRD/Research.
+2. Present the proposed Design Concept: "Based on the product goals, I recommend a [Philosophy Name] approach..."
+3. Ask for confirmation or adjustment.
+4. Save to `docs/ui/design-concept.md`.
+
+### Step 3: Confirm Technical Preferences
+
+Translate the **Design Concept** into concrete technical constraints.
+
+Collect preferences from `docs/tech/stack.md` or existing `docs/ui/style.md`. If creating new, **recommend values that match the Step 2 Design Concept**.
 
 | Preference | Description | Example Values |
 |------------|-------------|----------------|
@@ -56,10 +99,11 @@ Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if th
 | **Visual Style** | Overall aesthetic direction | minimal, modern, playful, corporate |
 
 **Flow:**
-1. Extract existing preferences from stack.md or style.md
-2. Present summary: "Design preferences: [list]. Confirm or adjust?"
-3. If no existing preferences, ask user to provide them
-4. Save confirmed preferences to `docs/ui/style.md`
+1. Recommend settings that align with `design-concept.md`.
+   *   *Example: If concept is "Playful", recommend Rounded (lg/full) and Vibrant colors.*
+   *   *Example: If concept is "Professional/Data", recommend Square/Small radius and Muted colors.*
+2. Present summary: "Based on the Design Concept, here are the recommended technical specs: [list]. Confirm?"
+3. Save confirmed preferences to `docs/ui/style.md`
 
 **style.md format:**
 ```markdown
@@ -73,7 +117,7 @@ Collect design preferences from `docs/tech/stack.md` or `docs/ui/style.md` if th
 - **Visual Style:** [style]
 ```
 
-### Step 3: Identify and Prioritize Pages
+### Step 4: Identify and Prioritize Pages
 
 From user-flow.md, extract all unique screens and sort by implementation priority:
 
@@ -88,12 +132,11 @@ From user-flow.md, extract all unique screens and sort by implementation priorit
 1. List all pages mentioned in flows
 2. Auto-sort by priority order above
 3. Present numbered list for confirmation
-
-Ask: "Pages sorted by implementation priority: [numbered list]. Adjust order?"
+4. Ask: "Pages sorted by implementation priority: [numbered list]. Adjust order?"
 
 File naming: `{nn}-{page-name}.md` (e.g., `01-landing.md`, `02-404.md`)
 
-### Step 4: Generate Page Specs
+### Step 5: Generate Page Specs
 
 For each page, create `docs/ui/pages/{nn}-{page-name}.md`:
 
@@ -118,14 +161,14 @@ For each page, create `docs/ui/pages/{nn}-{page-name}.md`:
 - **Error:** [Error state description]
 
 ## Design Style
-[Design constraints from tech stack or user input]
+[Specific design notes for this page, referencing design-concept.md]
 ```
 
 Use the user's conversation language for page specs.
 
-### Step 5: Generate Stitch AI Prompts
+### Step 6: Generate Stitch AI Prompts
 
-For each page, create `docs/ui/prompts/{nn}-{page-name}.md`:
+For each page, create `docs/ui/prompts/{nn}-{page-name}.md`. **Crucially, inject the Design Concept to guide the AI's aesthetic generation.**
 
 ```markdown
 Design a [page type] for a [platform] application.
@@ -134,6 +177,11 @@ Design a [page type] for a [platform] application.
 [Product name] - [One-liner from PRD]
 Target users: [Target users from PRD]
 This page: [Brief description of this page's purpose and position in user flow]
+
+**Design Philosophy:**
+[Insert content from design-concept.md > Design Philosophy]
+Mood: [Insert content from design-concept.md > Mood]
+Visual Strategy: [Insert content from design-concept.md > Visual Strategy]
 
 **Elements:**
 - [Element with behavior]
@@ -158,14 +206,14 @@ This page: [Brief description of this page's purpose and position in user flow]
 
 **Important:** Always extract product name, one-liner, and target users from `docs/prd/prd.md` and include them in the Context section. This ensures Stitch AI generates contextually appropriate content instead of placeholder text.
 
-### Step 6: Batch Review
+### Step 7: Batch Review
 
 After generating all pages:
 - Present a summary of all specs and prompts
 - Ask if any need adjustments
 - Iterate on specific pages as needed
 
-### Step 7: Summary
+### Step 8: Summary
 
 After all pages complete:
 - List all generated files
@@ -173,9 +221,9 @@ After all pages complete:
 
 ## Key Principles
 
+- **Concept First**: Design parameters flow from the Concept, they are not arbitrary choices.
 - **Match user's language**: Specs follow conversation language, prompts always in English
 - **Derive from user flow**: Every page should map to a flow step
-- **Confirm before generating**: Always confirm design preferences with user before generating prompts
 - **Inject product context**: Include product name, one-liner, and target users from PRD in prompts
 - **Apply design preferences**: Include all style preferences (color, radius, theme, visual style) in every prompt
 
@@ -183,7 +231,7 @@ After all pages complete:
 
 - **Missing tech stack**: Proceed without component library constraints, note that prompts may need updating after `/tech:stack`.
 - **Complex page with many states**: Break into sub-pages or components if a single prompt would be too long for Stitch AI.
-- **User wants different design direction**: Update Style section in both spec and prompt; maintain consistency across all pages.
+- **User wants different design direction**: Update `design-concept.md` first, then let that flow down to `style.md` and prompts.
 
 ## Landing Page Special Handling
 
@@ -196,7 +244,7 @@ When generating a landing page prompt, ask user to confirm Hero section details 
 | **Hero Visual** | none / product screenshot / mockup / 3D illustration / floating shapes |
 | **Social Proof** | none / metrics below hero / trust badges / client logos |
 
-Present defaults based on Visual Style from style.md:
+Present defaults based on **Design Concept** and Visual Style:
 - `minimal`: solid background, single CTA, none visual, none social proof
 - `modern`: gradient background, dual CTA, product screenshot, metrics below hero
 - `playful`: animated background, dual CTA, 3D illustration, trust badges
