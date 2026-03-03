@@ -11,14 +11,13 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/pm/market-research",
-        "./skills/pm/teardown",
-        "./skills/pm/writing-prd",
-        "./skills/tech/stack",
-        "./skills/tech/arch",
-        "./skills/ui/spec"
-      ],
-      "commands": ["./commands/"]
+        "./skills/pm-market-research",
+        "./skills/pm-competitor-analysis",
+        "./skills/pm-prd",
+        "./skills/tech-stack",
+        "./skills/tech-arch",
+        "./skills/ui-spec"
+      ]
     }
   ]
 }

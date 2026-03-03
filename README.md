@@ -2,12 +2,12 @@
 
 Claude Code skills for product builders.
 
-## Commands
+## Skills
 
-| Command | Description | Output |
-|---------|-------------|--------|
-| `/spark:pm-research` | Market research and opportunity discovery | `docs/prd/research-*.md` |
-| `/spark:pm-teardown` | Competitor feature analysis (optional) | `docs/prd/teardown-*.md` |
+| Skill | Description | Output |
+|-------|-------------|--------|
+| `/spark:pm-market-research` | Market research and opportunity discovery | `docs/prd/research-*.md` |
+| `/spark:pm-competitor-analysis` | Competitor feature analysis (optional) | `docs/prd/teardown-*.md` |
 | `/spark:pm-prd` | PRD with user flow | `docs/prd/prd.md`, `docs/prd/user-flow.md` |
 | `/spark:tech-stack` | Technology stack decisions | `docs/tech/stack.md` |
 | `/spark:tech-arch` | Top-level system architecture | `docs/tech/architecture.md` |
@@ -16,9 +16,9 @@ Claude Code skills for product builders.
 ## Workflow
 
 ```
-/spark:pm-research → /spark:pm-prd → /spark:tech-stack → /spark:ui-spec
-         ↓                                  ↘ /spark:tech-arch
-/spark:pm-teardown (optional)
+/spark:pm-market-research → /spark:pm-prd → /spark:tech-stack → /spark:ui-spec
+              ↓                                    ↘ /spark:tech-arch
+/spark:pm-competitor-analysis (optional)
 ```
 
 ## Installation

@@ -1,5 +1,5 @@
 ---
-name: writing-prd
+name: pm-prd
 description: 'Use when user explicitly wants to write or create a PRD/product requirements document. Triggers: "write PRD", "create PRD", "document requirements", "define the product". Requires user to have a product direction—if unclear, suggest market-research first.'
 ---
 
@@ -17,7 +17,7 @@ Transform product ideas into structured PRD documents with phased implementation
 
 ### Step 1: Assess Readiness
 
-**Same-session handoff**: If user just completed `/pm:research` or `/pm:teardown` in this conversation, skip the file check—use those insights directly and proceed to pre-fill confirmation.
+**Same-session handoff**: If user just completed `/spark:pm-market-research` or `/spark:pm-competitor-analysis` in this conversation, skip the file check—use those insights directly and proceed to pre-fill confirmation.
 
 **New session**: Check for existing documents:
 

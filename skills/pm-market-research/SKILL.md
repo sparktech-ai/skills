@@ -1,5 +1,5 @@
 ---
-name: market-research
+name: pm-market-research
 description: 'Use when user explicitly wants market research, competitor analysis, or needs help deciding what product to build. Triggers: "do market research", "analyze competitors", "what should I build", "validate this idea", "is there a market for". Do NOT trigger for casual product discussions or when user already has clear requirements.'
 ---
 
@@ -141,7 +141,7 @@ Generate `docs/prd/research-<topic>.md`:
 - Rationale
 ```
 
-After generating the document, suggest: "Want to dive deeper into competitor features? Use `/pm:teardown` for detailed analysis. Or skip to `/pm:prd` if ready to define requirements."
+After generating the document, suggest: "Want to dive deeper into competitor features? Use `/spark:pm-competitor-analysis` for detailed analysis. Or skip to `/spark:pm-prd` if ready to define requirements."
 
 ## Key Principles
 

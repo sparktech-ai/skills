@@ -1,5 +1,5 @@
 ---
-name: teardown
+name: pm-competitor-analysis
 description: 'Use when user wants deep competitor feature analysis. Triggers: "analyze competitor features", "teardown competitors", "what features do competitors have", "competitor deep dive". Requires knowing which competitors to analyze—if unclear, suggest market-research first.'
 ---
 
