@@ -141,7 +141,7 @@ Generate `docs/prd/research-<topic>.md`:
 - Rationale
 ```
 
-After generating the document, suggest: "Want to dive deeper into competitor features? Use `/spark:pm-competitor-analysis` for detailed analysis. Or skip to `/spark:pm-prd` if ready to define requirements."
+After generating the document, suggest: "Want to dive deeper into competitor features? Use `/pm-competitor-analysis` for detailed analysis. Or skip to `/pm-prd` if ready to define requirements."
 
 ## Key Principles
 
