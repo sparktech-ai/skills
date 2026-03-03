@@ -1,6 +1,6 @@
 ---
 name: tech-arch
-description: Use for top-level system architecture after stack decision. Triggers: "system architecture", "module design", "technical architecture". Requires stack.md to exist.
+description: 'Use for top-level system architecture after stack decision. Triggers: "system architecture", "module design", "technical architecture". Requires stack.md to exist.'
 ---
 
 # System Architecture

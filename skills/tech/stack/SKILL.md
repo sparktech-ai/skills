@@ -1,6 +1,6 @@
 ---
 name: tech-stack
-description: Use when ready to decide on technology stack after PRD. Triggers: "choose tech stack", "what technology", "technical decisions". Requires PRD to exist.
+description: 'Use when ready to decide on technology stack after PRD. Triggers: "choose tech stack", "what technology", "technical decisions". Requires PRD to exist.'
 ---
 
 # Tech Stack Decision

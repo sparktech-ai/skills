@@ -1,6 +1,6 @@
 ---
 name: ui-spec
-description: Use to generate page specifications and Stitch AI prompts. Triggers: "design pages", "UI spec", "page breakdown", "Stitch prompts". Requires PRD and user-flow.
+description: 'Use to generate page specifications and Stitch AI prompts. Triggers: "design pages", "UI spec", "page breakdown", "Stitch prompts". Requires PRD and user-flow.'
 ---
 
 # UI Specification
