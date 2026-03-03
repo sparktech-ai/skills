@@ -24,8 +24,8 @@ Claude Code skills for product builders.
 ## Installation
 
 ```bash
-/plugin marketplace add sparking-ai/skills
-/plugin install spark@sparkai-skills
+/plugin marketplace add sparktech-ai/skills
+/plugin install product-builder@sparktech-ai
 ```
 
 Then restart Claude Code to activate the skills.

@@ -1,11 +1,11 @@
 {
-  "name": "sparkai-skills",
+  "name": "sparktech-ai",
   "owner": {
     "name": "Brooks"
   },
   "plugins": [
     {
-      "name": "spark",
+      "name": "product-builder",
       "description": "Product builder workflow: research, PRD, tech stack, architecture, UI specs",
       "version": "0.1.0",
       "source": "./",
