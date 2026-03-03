@@ -35,7 +35,7 @@ docs/ui/
 
 ### Step 1: Check Prerequisites
 
-**Same-session handoff**: If user just completed `/tech:stack` or `/pm:prd` in this conversation, use that context directly.
+**Same-session handoff**: If user just completed `/tech-stack` or `/pm-prd` in this conversation, use that context directly.
 
 **New session**: Check for existing documents:
 - `docs/prd/prd.md` - **Required**
@@ -229,7 +229,7 @@ After all pages complete:
 
 ## Handling Edge Cases
 
-- **Missing tech stack**: Proceed without component library constraints, note that prompts may need updating after `/tech:stack`.
+- **Missing tech stack**: Proceed without component library constraints, note that prompts may need updating after `/tech-stack`.
 - **Complex page with many states**: Break into sub-pages or components if a single prompt would be too long for Stitch AI.
 - **User wants different design direction**: Update `design-concept.md` first, then let that flow down to `style.md` and prompts.
 

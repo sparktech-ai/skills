@@ -40,7 +40,7 @@ Transform product ideas into structured PRD documents with phased implementation
 
 Based on clarity of user's input:
 - **Clear direction** → Proceed to Step 2
-- **Vague/uncertain** → Suggest using `/pm:research` for market research first
+- **Vague/uncertain** → Suggest using `/pm-market-research` for market research first
 
 ### Step 2: Product Definition
 

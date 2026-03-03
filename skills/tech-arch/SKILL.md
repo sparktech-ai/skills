@@ -17,7 +17,7 @@ Create top-level architecture design including module breakdown, key decisions, 
 
 ### Step 1: Check Prerequisites
 
-**Same-session handoff**: If user just completed `/tech:stack` in this conversation, use that context directly.
+**Same-session handoff**: If user just completed `/tech-stack` in this conversation, use that context directly.
 
 **New session**: Check for existing documents:
 - `docs/tech/stack.md` - **Required**

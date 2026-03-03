@@ -24,14 +24,14 @@ Analyzes competitors on three dimensions:
 
 ### Step 1: Identify Competitors
 
-**Same-session handoff**: If user just completed `/pm:research` in this conversation, use the competitors identified there directly.
+**Same-session handoff**: If user just completed `/pm-market-research` in this conversation, use the competitors identified there directly.
 
 **New session**: Check for `docs/prd/research-*.md` files first:
 
 - **Research exists** → Ask: "Found research for [topic] with competitors [list]. Analyze these?"
-- **No research** → Ask: "Do you have specific competitors in mind, or should we use `/pm:research` to identify them first?"
+- **No research** → Ask: "Do you have specific competitors in mind, or should we use `/pm-market-research` to identify them first?"
   - User has competitors → Proceed with user-specified list (2-5 competitors)
-  - User unsure → Guide to `/pm:research` first
+  - User unsure → Guide to `/pm-market-research` first
 
 ### Step 2: Analyze Each Competitor
 
@@ -104,7 +104,7 @@ Legend: ✅ Well implemented | ⚠️ Partially/poorly implemented | ❌ Missing
 - [Features that must exist to compete]
 ```
 
-After generating the document, suggest: "Ready to define your product? Use `/pm:prd` to create a PRD based on this analysis."
+After generating the document, suggest: "Ready to define your product? Use `/pm-prd` to create a PRD based on this analysis."
 
 ## Key Principles
 

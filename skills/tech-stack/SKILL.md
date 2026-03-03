@@ -17,13 +17,13 @@ Guide technology choices based on product requirements and constraints.
 
 ### Step 1: Check Prerequisites
 
-**Same-session handoff**: If user just completed `/pm:prd` in this conversation, use that context directly and proceed to Step 2.
+**Same-session handoff**: If user just completed `/pm-prd` in this conversation, use that context directly and proceed to Step 2.
 
 **New session**: Check for existing documents:
 - `docs/prd/prd.md` - **Required**
 - `docs/prd/user-flow.md` - **Optional** (helps understand flow complexity)
 
-Missing PRD → Suggest using `/pm:prd` first
+Missing PRD → Suggest using `/pm-prd` first
 
 ### Step 2: Gather Constraints
 
@@ -91,7 +91,7 @@ Generate `docs/tech/stack.md`:
 - [Technology]: [Reason for exclusion]
 ```
 
-After generating, suggest: "Stack decided. Ready for `/ui:spec` to design pages or `/tech:arch` for system architecture."
+After generating, suggest: "Stack decided. Ready for `/ui-spec` to design pages or `/tech-arch` for system architecture."
 
 ## Key Principles
 
