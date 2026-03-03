@@ -7,7 +7,7 @@ Claude Code skills for product builders.
 | Skill | Description | Output |
 |-------|-------------|--------|
 | `/spark:pm-market-research` | Market research and opportunity discovery | `docs/prd/research-*.md` |
-| `/spark:pm-competitor-analysis` | Competitor feature analysis (optional) | `docs/prd/teardown-*.md` |
+| `/spark:pm-competitor-analysis` | Competitor feature analysis (optional) | `docs/prd/competitor-*.md` |
 | `/spark:pm-prd` | PRD with user flow | `docs/prd/prd.md`, `docs/prd/user-flow.md` |
 | `/spark:tech-stack` | Technology stack decisions | `docs/tech/stack.md` |
 | `/spark:tech-arch` | Top-level system architecture | `docs/tech/architecture.md` |

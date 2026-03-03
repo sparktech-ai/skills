@@ -58,7 +58,7 @@ Complete one competitor fully before moving to the next.
 
 ### Step 3: Output Document
 
-Generate `docs/prd/teardown-<topic>.md`:
+Generate `docs/prd/competitor-<topic>.md`:
 
 ```markdown
 # <Topic> Competitor Teardown

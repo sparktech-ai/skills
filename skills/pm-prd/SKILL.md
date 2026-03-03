@@ -22,7 +22,7 @@ Transform product ideas into structured PRD documents with phased implementation
 **New session**: Check for existing documents:
 
 1. Check `docs/prd/research-*.md` (market research)
-2. Check `docs/prd/teardown-*.md` (competitor teardown)
+2. Check `docs/prd/competitor-*.md` (competitor analysis)
 
 **Pre-fill logic based on available documents:**
 
@@ -35,7 +35,7 @@ Transform product ideas into structured PRD documents with phased implementation
 | Teardown "Pain Points" | Feature ideas - problems to avoid |
 
 **Flow:**
-- **Documents exist** → Ask: "Found [research/teardown] for [topic]. Use this as the basis?" If yes, present pre-filled summary for confirmation.
+- **Documents exist** → Ask: "Found [research/competitor] for [topic]. Use this as the basis?" If yes, present pre-filled summary for confirmation.
 - **No documents** → Ask user to describe their product idea
 
 Based on clarity of user's input:
@@ -171,7 +171,7 @@ Also generate `docs/prd/user-flow.md`:
 
 ## Key Principles
 
-- **Flexible input**: Work with research docs, teardown analysis, or raw ideas
+- **Flexible input**: Work with research docs, competitor analysis, or raw ideas
 - **Phased approach**: Always structure as validation → refinement → expansion
 - **Proactive recommendations**: When user is uncertain, suggest based on research/best practices
 - **Product focus**: Keep technical details minimal, only essential constraints
